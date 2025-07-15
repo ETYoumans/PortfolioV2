@@ -1,14 +1,12 @@
 import './App.css';
-import Cartridge from './Cartridge';
+
 import SudokuColoring from './imgs/sudoku.png'
+import CartList from './CartridgeList'
 
 function App() {
   return (
     <div className="App">
-      <Cartridge 
-        image = {SudokuColoring}
-        link = ''
-      />
+      <CartList></CartList>
     </div>
   );
 }

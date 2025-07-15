@@ -1,28 +1,22 @@
-import "./Cartridge.css"
-import CartridgeImg from './imgs/cartridge.png'
+import "./Cartridge.css";
 
 const Cartridge = ({
-    image,
-    link
-}) => {
-    return (
-    <div className="Cartridge">
-      <div className="Shell">
-        <img 
-            src={CartridgeImg}
-            alt="Cartridge"
-            className="CartImg"
-        />
-      </div>
-      <div className="Sticker">
-        <img 
-            src={image}
-            alt="Sticker"
-            className="StickerImg"
-        />
+  image, 
+  title, 
+  link
+ }) => {
+  return (
+    <div className="CartObj">
+      <h1>{title}</h1>
+
+      <div className="Cartridge">
+        <img src={require('./imgs/cartridge.png')} alt="Shell" className="CartImg Shell" />
+        <div className="StickerWrapper">
+          <img src={image} alt="Sticker" className="StickerImg" />
+        </div>
       </div>
     </div>
-    );
-}
+  );
+};
 
 export default Cartridge;

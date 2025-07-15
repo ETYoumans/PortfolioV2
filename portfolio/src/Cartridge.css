@@ -1,27 +1,55 @@
-.Cartridge {
-    width:50%;
+img {
+    width: 50px;
     height: auto;
-    position: relative;
-    z-index: 0;
+    object-fit: contain;
+}
+
+.cart-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30vw;
+}
+
+.cart-arrow {
+  flex: 0 0 auto;
+}
+
+.cart-display {
+  flex: 0 0 auto;
+}
+
+
+.Cartridge {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  position: relative;
+  overflow: hidden;
 }
 
 .Shell {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    top: 12.4%;
-    z-index: 2;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+  z-index: 2;
 }
 
-.Sticker {
-    bottom: 0;
-    width: 100%;
-    z-index: 1;
+.StickerWrapper {
+  position: absolute;
+  top: 0%;
+  left: 11%;
+  width: 77%;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.StickerImg, .CartImg {
-    image-rendering: pixelated;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+.StickerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
 }
